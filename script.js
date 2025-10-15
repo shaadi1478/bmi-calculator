@@ -1,5 +1,4 @@
 
-<script>
 let weight = document.getElementById("weight");
 let height = document.getElementById("height");
 let btn = document.getElementById("btn");
@@ -35,4 +34,3 @@ btn.addEventListener("click", () => {
         result.className = "obese";
     }
 });
-</script>
