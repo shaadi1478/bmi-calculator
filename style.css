@@ -1,0 +1,99 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #0f172a, #1e3a8a, #312e81);
+            background-size: 200% 200%;
+            animation: gradientMove 8s ease infinite;
+        }
+
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .wrapper {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 40px;
+            width: 350px;
+            text-align: center;
+            color: #fff;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+            animation: dropIn 1s ease;
+        }
+
+        @keyframes dropIn {
+            from { opacity: 0; transform: translateY(-50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h2 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            color: #e0e7ff;
+            text-shadow: 0 0 8px #60a5fa;
+        }
+
+        input {
+            width: 80%;
+            padding: 14px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 10px;
+            outline: none;
+            font-size: 16px;
+            background: rgba(255,255,255,0.1);
+            color: #fff;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        input:focus {
+            background: rgba(255,255,255,0.2);
+            box-shadow: 0 0 10px #60a5fa;
+        }
+
+        button {
+            width: 85%;
+            padding: 14px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 10px;
+            background: linear-gradient(90deg,#2563eb,#9333ea);
+            color: #fff;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.4s;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px #9333ea;
+        }
+
+        #result {
+            margin-top: 25px;
+            font-size: 18px;
+            font-weight: 600;
+            padding: 12px;
+            border-radius: 10px;
+            transition: 0.4s;
+        }
+
+        .underweight { background: #f87171; color: #fff; }
+        .normal { background: #4ade80; color: #000; }
+        .overweight { background: #facc15; color: #000; }
+        .obese { background: #ef4444; color: #fff; }
